@@ -1,7 +1,7 @@
 {
   "name": "readme-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "App description.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/devBritt/readme-generator.git"
   },
-  "author": "",
+  "author": "Brittany Carlton",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/devBritt/readme-generator/issues"
   },
-  "homepage": "https://github.com/devBritt/readme-generator#readme"
+  "homepage": "https://github.com/devBritt/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
