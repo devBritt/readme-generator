@@ -3,8 +3,133 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// array of questions for user input
+const questions = [
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is your project called?',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('You must provide a title for your project!');
+                return false;
+            };
+        }
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description for the project:',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('You must provide a description!');
+            };
+        }
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'How can a user install the project?',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Installation instructions must be provided!');
+            };
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmUsage',
+        message: 'Would you like to include guidelines for using the application?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Are there any guidelines for using the application?',
+        when: ({ confirmUsage }) => {
+            if (confirmUsage) {
+                return true;
+            } else {
+                return false;
+            };
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmContributing',
+        message: 'Would you like to include guidelines for contributing to the project?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'What are the guidelines for contributing to this project?',
+        when: ({ confirmContributing }) => {
+            if (confirmContributing) {
+                return true;
+            } else {
+                return false;
+            };
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmTesting',
+        message: 'Would you like to include testing instructions?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'testing',
+        message: 'How can contributors perform testing?',
+        when: ({ confirmTesting }) => {
+            if (confirmTesting) {
+                return true;
+            } else {
+                return false;
+            };
+        }
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your project:',
+        choices: [
+            'Apache License 2.0', 'BSD 3-Clause license', 'BSD 2-Clause license', 'GNU GPL', 'GNU LPGL', 'MIT license', 'Mozilla Public License 2.0', 'Common Development and Distribution License', 'Eclipse Public License 2.0'
+        ],
+        default: 5
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub username:',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                return false;
+            };
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter an email address for for users/developers to send questions:',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                return false;
+            };
+        }
+    }
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
