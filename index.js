@@ -1,6 +1,6 @@
 // packages
-const fs = require("fs");
-const inquirer = require("inquirer");
+const { writeFile } = require("fs/promises");
+const { prompt } = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user input
@@ -120,7 +120,7 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Enter an email address for for users/developers to send questions:',
+        message: 'Enter an email address for users/developers to send questions:',
         validate: nameInput => {
             if (nameInput) {
                 return true;
@@ -132,10 +132,16 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+async function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+    // prompt user for info
+    const answers = await prompt(questions);
+    // generate markdown
+    console.log(answers);
+    // write file
+}
 
 // Function call to initialize app
 init();
