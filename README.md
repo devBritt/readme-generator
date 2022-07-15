@@ -1,6 +1,6 @@
 # README Generator
 
-App description.
+The README Generator is a CLI app that can be used to create professional READMEs for open source projects.
 
 ## Project Requirements
 
@@ -20,8 +20,8 @@ WHEN I clicked on the links in the Table of Contents, I am taken to the correspo
 
 ## Demo
 
-Link to/embedded demo video.
+[Demo Video](https://drive.google.com/file/d/1zI8WdIH5bhMzyogSXWD7A2wzjx_-CMn8/view?usp=sharing)
 
 ## Lessons Learned
 
-What did you learn from this project? What challenges did you have to overcome?
+This project was an interesting break from previous challenges as it was the first to focus on the backend rather than the frontend. It was the first opportunity to use Node.js and allowed me to practice prompting users for input, collecting that input, and using it in a meaningful way, as well as writing to a file using the file system. The most interesting part for me was working with teplate literals and generating the text that would be written to a file.
