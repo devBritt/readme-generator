@@ -41,7 +41,7 @@ ${renderLicenseBadge(license)}
 
 <h3 align='center'>
 
-*[Installation](##Installation)* | ${ data.confirmUsage ? `*[Usage](##Usage)* |` : '' } *[License](##License)* | ${ data.confirmContributing ? ` *[Contributing](##Contributing)* | ` : '' }${ data.testing ? `*[Tests](##Tests)* | ` : '' }*[Questions](##Questions)*
+*[Installation](#installation)* | ${ data.confirmUsage ? `*[Usage](#usage)* |` : '' } *[License](#license)* | ${ data.confirmContributing ? ` *[Contributing](#contributing)* | ` : '' }${ data.testing ? `*[Tests](#tests)* | ` : '' }*[Questions](#questions)*
 
 ---
 
