@@ -34,16 +34,18 @@ function generateMarkdown(data) {
 `<h1 align='center'>${title}</h1>
 ${renderLicenseBadge(license)}
 
-## Description
-${description}
+<h2 align='center'>Description</h2>
+<p align='center'>${description}</p>
 
-## Table of Contents
-[Installation](##Installation) ${ data.confirmUsage ? `
-[Usage](##Usage)` : '' }
-[License](##License) ${ data.confirmContributing ? `
-[Contributing](##Contributing)` : '' } ${ data.testing ? `
-[Tests](##Tests)` : '' }
-[Questions](##Questions)
+<h2 align='center'>Table of Contents</h2>
+
+<h3 align='center'>
+
+*[Installation](##Installation)* | ${ data.confirmUsage ? `*[Usage](##Usage)* |` : '' } *[License](##License)* | ${ data.confirmContributing ? ` *[Contributing](##Contributing)* | ` : '' }${ data.testing ? `*[Tests](##Tests)* | ` : '' }*[Questions](##Questions)*
+
+---
+
+</h3>
 
 ## Installation
 \`${installation}\`

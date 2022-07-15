@@ -146,16 +146,20 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-async function writeToFile(fileName, data) {}
+// write markdown to a readme.md file
+async function writeToFile(fileName, data) {
+    await writeFile(fileName, data);
+}
 
-// TODO: Create a function to initialize app
+// initialize app on run
 async function init() {
     // prompt user for info
-    // const answers = await prompt(questions);
+    const answers = await prompt(questions);
     // generate markdown
-    console.log(generateMarkdown(mockAnswers));
+    const markdown = generateMarkdown(answers);
     // write file
+    await writeToFile('./dist/README.md', markdown);
+    console.log("README.md created! Check the dist directory to see it!");
 }
 
 // Function call to initialize app
