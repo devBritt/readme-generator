@@ -58,7 +58,8 @@ ${renderLicenseSection(data.license)} ${ data.confirmContributing ? `
 ## Contributing
 ${data.contributing}` : '' } ${ data.confirmTesting ? `
 
-## Tests` : '' }
+## Tests
+${data.testing}` : '' }
 
 ## Questions
 Feel free to reach out with any questions, comments, or concerns!
