@@ -3,6 +3,21 @@ const { writeFile } = require("fs/promises");
 const { prompt } = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+// mock data
+const mockAnswers = {
+    title: 'Readme Generator',
+    description: 'A CLI application that can be useed to generate a professional and informative README for open source projects.',
+    installation: 'npm i readme-generator',
+    confirmUsage: true,
+    usage: 'Use guidelines',
+    confirmContributing: true,
+    contributing: 'Pick an issue and assign it to yourself. Create a pull request when complete.',
+    confirmTesting: false,
+    license: 'MIT license',
+    github: 'devBritt',
+    email: 'brittanyrc95@gmail.com'
+};
+
 // array of questions for user input
 const questions = [
     {
@@ -137,9 +152,9 @@ async function writeToFile(fileName, data) {}
 // TODO: Create a function to initialize app
 async function init() {
     // prompt user for info
-    const answers = await prompt(questions);
+    // const answers = await prompt(questions);
     // generate markdown
-    console.log(answers);
+    console.log(generateMarkdown(mockAnswers));
     // write file
 }
 
