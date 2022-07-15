@@ -13,7 +13,7 @@ const mockAnswers = {
     confirmContributing: true,
     contributing: 'Pick an issue and assign it to yourself. Create a pull request when complete.',
     confirmTesting: false,
-    license: 'MIT license',
+    license: 'MIT',
     github: 'devBritt',
     email: 'brittanyrc95@gmail.com'
 };
@@ -116,7 +116,7 @@ const questions = [
         name: 'license',
         message: 'Choose a license for your project:',
         choices: [
-            'Apache License 2.0', 'BSD 3-Clause license', 'BSD 2-Clause license', 'GNU GPL', 'GNU LPGL', 'MIT license', 'Mozilla Public License 2.0', 'Common Development and Distribution License', 'Eclipse Public License 2.0'
+            'Apache 2.0', 'BSD 3-Clause', 'BSD 2-Clause', 'GNU GPL', 'GNU LPGL 3.0', 'MIT', 'Mozilla Public License 2.0', 'Common Development and Distribution License', 'Eclipse Public License 2.0'
         ],
         default: 5
     },
